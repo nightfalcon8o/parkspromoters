@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise - Defenders of Wildlife</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Parks Promoters Logo (1).png" type="image/png">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Defenders of Wildlife</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="merchandise.html">Merchandise</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Our Merchandise</h2>
+            <p>Support our cause by purchasing from our exclusive merchandise store. All proceeds go towards wildlife conservation efforts.</p>
+
+            <div class="merch-card">
+                <!-- T-shirt image that will change based on color selection -->
+                <img id="tshirt-image" src="merch/blue t-shirt.png" alt="Defenders of Wildlife T-Shirt" class="merch-image">
+                
+                <div class="merch-details">
+                    <h2>Defenders of Wildlife T-Shirt</h2>
+                    <p><strong>Price:</strong> £15</p>
+                    <p><strong>Stock: </strong>2500</p>
+                    <p>Show your support with this comfortable t-shirt. Available in various colors and sizes.</p>
+            
+                    <!-- Dropdown for color options -->
+                    <label for="tshirt-color">Choose a color:</label>
+                    <select id="tshirt-color" onchange="changeTshirtColorDropdown()">
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value="cyan">Cyan</option>
+                        <option value="purple">Purple</option>
+                    </select>
+            
+                    <button id="buy-now-button" onclick="buyNow()">Buy Now</button>
+                </div>
+            </div>
+
+            <section class="merchandise-section">
+                <div class="merch-card">
+                    <img src="merch\Water bottle.png" alt="Defenders of Wildlife Water Bottle" class="merch-image">
+                    <div class="merch-details">
+                        <h2>Defenders of Wildlife Water Bottle</h2>
+                        <p><strong>Price:</strong> £6.99</p>
+                        <p><strong>In stock:</strong> 10000</p>
+                        <p>This water bottle will keep your water warm throughout the day.</p>
+                        <button onclick="window.location.href='https://www.payment-link.com'">Buy Now</button>
+                    </div>
+                </div>
+
+                <section class="merchandise-section">
+                    <div class="merch-card">
+                        <img src="merch\Notebooks.png" alt="Defenders of Wildlife Notebooks" class="merch-image">
+                        <div class="merch-details">
+                            <h2>Defenders of Wildlife Notebooks</h2>
+                            <p><strong>Price:</strong> £4.99</p>
+                            <p><strong>Stock: </strong>10000</p>
+                            <p>Take your everyday notes in this fancy notebook.</p>
+                            <button onclick="window.location.href='https://www.payment-link.com'">Buy Now</button>
+                        </div>
+                    </div>
+
+                    <section class="merchandise-section">
+                        <div class="merch-card">
+                            <img src="merch\Laptop case.png" alt="Defenders of Wildlife Laptop Case" class="merch-image">
+                            <div class="merch-details">
+                                <h2>Defenders of Wildlife Laptop Case</h2>
+                                <p><strong>Price:</strong> £7.99</p>
+                                <p><strong>In stock:</strong> 1500</p>
+                                <p>Keep your laptop safe in this comfy laptop case.</p>
+                                <button onclick="window.location.href='https://www.payment-link.com'">Buy Now</button>
+                            </div>
+                        </div>
+
+                        <section class="merchandise-section">
+                            <div class="merch-card">
+                                <img src="merch\Hoodie.png" alt="Defenders of Wildlife Hoodie" class="merch-image">
+                                <div class="merch-details">
+                                    <h2>Defenders of Wildlife Hoodie</h2>
+                                    <p><strong>Price:</strong> £15.49</p>
+                                    <p><strong>In stock:</strong> 2000</p>
+                                    <p>Our hoodie is really comfortable and warm, wrap up in winter with your Defenders of Wildlife hoodie.</p>
+                                    <button onclick="window.location.href='https://www.payment-link.com'">Buy Now</button>
+                                </div>
+                            </div>
+
+                            <section class="merchandise-section">
+                                <div class="merch-card">
+                                    <img src="merch\Mug.png" alt="Defenders of Wildlife Mug" class="merch-image">
+                                    <div class="merch-details">
+                                        <h2>Defenders of Wildlife Mug</h2>
+                                        <p><strong>Price:</strong> £6.99</p>
+                                        <p><strong>In stock:</strong> 5000</p>
+                                        <p>Enjoy your morning coffee in our eco-friendly Defenders of Wildlife mug.</p>
+                                        <button onclick="window.location.href='https://www.payment-link.com'">Buy Now</button>
+                                    </div>
+                                </div>
+
+                                <section class="merchandise-section">
+                                    <div class="merch-card">
+                                        <img src="merch\Phone case.png" alt="Defenders of Wildlife Phone Case" class="merch-image">
+                                        <div class="merch-details">
+                                            <h2>Defenders of Wildlife Mug</h2>
+                                            <p><strong>Price:</strong> £7.99</p>
+                                            <p><strong>In stock:</strong> 7500</p>
+                                            <p>Make your phone look boss in this phone case.</p>
+                                            <button onclick="window.location.href='https://www.payment-link.com'">Buy Now</button>
+                                        </div>
+                                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let selectedColor = 'blue'; // Default selected color
+    
+        // Function for color swatches
+        function changeTshirtColor(color) {
+            // Update the image based on the selected color from swatches
+            document.getElementById('tshirt-image').src = `merch/${color} t-shirt.png`;
+    
+            // Update the selected color
+            selectedColor = color;
+        }
+    
+        // Function for dropdown selection
+        function changeTshirtColorDropdown() {
+            // Get the selected color from the dropdown
+            const dropdown = document.getElementById('tshirt-color');
+            const selectedColorDropdown = dropdown.value;
+    
+            // Update the image based on the selected color
+            document.getElementById('tshirt-image').src = `merch/${selectedColorDropdown} t-shirt.png`;
+    
+            // Update the selected color globally
+            selectedColor = selectedColorDropdown;
+        }
+    
+        function buyNow() {
+            // Redirect to different purchase pages based on the selected color
+            let purchaseUrl = '';
+    
+            switch (selectedColor) {
+                case 'blue':
+                    purchaseUrl = 'https://www.payment-link.com/blue-tshirt';
+                    break;
+                case 'red':
+                    purchaseUrl = 'https://www.payment-link.com/red-tshirt';
+                    break;
+                case 'cyan':
+                    purchaseUrl = 'https://www.payment-link.com/cyan-tshirt';
+                    break;
+                case 'purple':
+                    purchaseUrl = 'https://www.payment-link.com/purple-tshirt';
+                    break;
+                default:
+                    purchaseUrl = 'https://www.payment-link.com/tshirt';
+            }
+    
+            // Redirect to the appropriate link
+            window.location.href = purchaseUrl;
+        }
+    </script>
+    
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Defenders of Wildlife x PARKs Promoters</p>
+        </div>
+    </footer>
+</body>
+</html>
